@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Create a New Post</h1>
+  <form method="POST" action="{% url 'post_new' %}">
+    <!-- The action URL should point to the view that handles the form submission. -->
+    <!-- In this case, it's the same URL as the one that renders the form. -->
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create Post</button>
+  </form>
+{% endblock %}
+
+
+
+
+
+
+

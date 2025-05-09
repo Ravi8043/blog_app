@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Django Blog</title>
+    </head>
+    <body>
+        <div>
+        <div>
+            <h1><a href="{% url 'home'%}">Blog Space</a></h1>
+        </div>
+        <div>
+            <a href="{%url 'post_new'%}"> +New Blog Post</a>
+        </div>
+        {%block content%}
+        {%endblock %}
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---<html>
+<head>
+<title>Django blog</title>
+</head>
+<body>
+<div>
+<header>
+<div>
+<h1><a href="{% url 'home' %}">Django blog</a></h1>
+</div>
+<div>
+<a href="{% url 'post_new' %}">+ New Blog Post</a>
+</div>
+</header>
+</div>
+</body>
+</html> --->

@@ -1,0 +1,9 @@
+{%extends 'base.html' %}
+{% block content %}
+<div><h2>{{ blog.title }}</h2>
+<p>{{ blog.content }}</p></div>
+<div><a href="{%url 'post_edit' pk=blog.pk%}">+Edit the Blog</a>
+</div><br>
+<div>
+<a href="{%url 'post_delete' pk=blog.pk %}">Delete blog</a></div>
+{% endblock content %}

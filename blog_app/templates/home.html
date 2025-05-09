@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for blog in blogs %}
+<div class="blog">
+<!-- 
+    Renders the blog post title as a clickable link.
+    The link navigates to the detail page of the blog post using its primary key (blog.pk).
+    The URL is dynamically generated using Django's 'url' template tag with the 'post_detail' route.
+-->
+<h2><a href="{% url 'post_detail' blog.pk %}">{{ blog.title }}</a></h2>
+<p>{{ blog.content }}</p>
+</div>
+{% endfor %}
+{% endblock %}
